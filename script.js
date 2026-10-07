@@ -1,5 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* ================================
+       MOBILE NAVIGATION
+    ================================= */
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+
+        menuToggle.addEventListener('click', () => {
+
+            const isOpen = navLinks.classList.toggle('active');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                isOpen
+            );
+
+        });
+
+
+        navLinks.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                navLinks.classList.remove('active');
+
+                menuToggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+            });
+
+        });
+
+
+        document.addEventListener('click', (event) => {
+
+            if (
+                navLinks.classList.contains('active') &&
+                !navLinks.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                navLinks.classList.remove('active');
+
+                menuToggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+            }
+
+        });
+
+    }
+
+
+    /* ================================
+       BACKGROUND CANVAS
+    ================================= */
+
     const canvas = document.getElementById('background-canvas');
 
     if (!canvas) return;
