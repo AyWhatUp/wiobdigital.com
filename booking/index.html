@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Meeting | Wiob Digital</title>
+    <meta name="description" content="Schedule a meeting with Wiob Digital to discuss your business and advertising goals.">
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600&family=Poppins:wght@600;700&family=Roboto+Condensed:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .booking-section {
+            min-height: 100vh;
+            padding: 150px 25px 80px;
+        }
+
+        .booking-content {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .booking-description {
+            max-width: 650px;
+            margin: 20px auto 45px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.05rem;
+        }
+
+        .calendar-frame {
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .calendar-frame iframe {
+            display: block;
+            width: 100%;
+            height: 750px;
+            border: 0;
+            background: #ffffff;
+        }
+
+        .booking-note {
+            margin-top: 22px;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.9rem;
+        }
+
+        .booking-note a {
+            color: #c86cff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            .booking-section {
+                padding: 125px 15px 55px;
+            }
+
+            .calendar-frame {
+                border-radius: 10px;
+            }
+
+            .calendar-frame iframe {
+                height: 850px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html#home">
+                <img src="../Wiob Digital Logo.png" alt="Wiob Digital">
+            </a>
+        </div>
+
+        <a href="../index.html" class="button primary-button"
+           style="min-width: auto; min-height: 44px; padding: 10px 20px; font-size: 0.95rem;">
+            Back to Home
+        </a>
+    </nav>
+
+    <main class="booking-section">
+        <div class="booking-content">
+
+            <p class="eyebrow">LET'S CONNECT</p>
+
+            <h1 style="font-size: clamp(2.4rem, 6vw, 4rem);">
+                Book a Meeting
+            </h1>
+
+            <p class="booking-description">
+                Choose a convenient time to discuss your business,
+                advertising goals, and potential opportunities to work together.
+            </p>
+
+            <div class="calendar-frame">
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <iframe
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1PuhKeYrvFL2ePTWuafT41Ev078oFsuzpYt2_nYXsUate7r8e4zqyxZuCdNQwlNHMShEPyInz9?gv=true"
+                    title="Book a meeting with Wiob Digital"
+                    loading="lazy">
+                </iframe>
+                <!-- Google Calendar Appointment Scheduling end -->
+            </div>
+
+            <p class="booking-note">
+                Having trouble booking?
+                <a href="mailto:info@wiobdigital.com">Contact us by email</a>.
+            </p>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Wiob Digital. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#about">About</a>
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../terms.html">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
