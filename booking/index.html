@@ -34,6 +34,7 @@
 
         .calendar-frame {
             width: 100%;
+            min-height: 750px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 16px;
@@ -41,12 +42,10 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
         }
 
-        .calendar-frame iframe {
-            display: block;
+        #my-cal-inline {
             width: 100%;
             height: 750px;
-            border: 0;
-            background: #ffffff;
+            overflow: auto;
         }
 
         .booking-note {
@@ -66,10 +65,11 @@
             }
 
             .calendar-frame {
+                min-height: 850px;
                 border-radius: 10px;
             }
 
-            .calendar-frame iframe {
+            #my-cal-inline {
                 height: 850px;
             }
         }
@@ -106,13 +106,62 @@
             </p>
 
             <div class="calendar-frame">
-                <!-- Google Calendar Appointment Scheduling begin -->
-                <iframe
-                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1PuhKeYrvFL2ePTWuafT41Ev078oFsuzpYt2_nYXsUate7r8e4zqyxZuCdNQwlNHMShEPyInz9?gv=true"
-                    title="Book a meeting with Wiob Digital"
-                    loading="lazy">
-                </iframe>
-                <!-- Google Calendar Appointment Scheduling end -->
+                <!-- Cal ID inline embed begins -->
+                <div id="my-cal-inline"></div>
+
+                <script type="text/javascript">
+                    (function (C, A, L) {
+                        let p = function (a, ar) { a.q.push(ar); };
+                        let d = C.document;
+                        C.Cal = C.Cal || function () {
+                            let cal = C.Cal;
+                            let ar = arguments;
+
+                            if (!cal.loaded) {
+                                cal.ns = {};
+                                cal.q = cal.q || [];
+                                d.head.appendChild(d.createElement("script")).src = A;
+                                cal.loaded = true;
+                            }
+
+                            if (ar[0] === L) {
+                                const api = function () { p(api, arguments); };
+                                const namespace = ar[1];
+                                api.q = api.q || [];
+
+                                if (typeof namespace === "string") {
+                                    cal.ns[namespace] = cal.ns[namespace] || api;
+                                    p(cal.ns[namespace], ar);
+                                    p(cal, ["initNamespace", namespace]);
+                                } else {
+                                    p(cal, ar);
+                                }
+
+                                return;
+                            }
+
+                            p(cal, ar);
+                        };
+                    })(window, "https://cal.id/embed-link/embed.js", "init");
+
+                    Cal("init", "default", { origin: "https://cal.id" });
+
+                    Cal.ns["default"]("inline", {
+                        elementOrSelector: "#my-cal-inline",
+                        config: { layout: "month_view" },
+                        calLink: "bill/discovery-call-w-bill",
+                    });
+
+                    Cal.ns["default"]("ui", {
+                        cssVarsPerTheme: {
+                            light: { "cal-brand": "#c86cff" },
+                            dark: { "cal-brand": "#c86cff" }
+                        },
+                        hideEventTypeDetails: false,
+                        layout: "month_view"
+                    });
+                </script>
+                <!-- Cal ID inline embed ends -->
             </div>
 
             <p class="booking-note">
