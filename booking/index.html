@@ -4,31 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book a Meeting | Wiob Digital</title>
-    <meta name="description" content="Schedule a meeting with Wiob Digital to discuss your business and advertising goals.">
+    <title>Home Care Agency Growth | Wiob Digital</title>
+    <meta name="description" content="Get more qualified private-pay family consultations for your home care agency with performance-based marketing, fast follow-up, and no monthly agency retainer.">
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600&family=Poppins:wght@600;700&family=Roboto+Condensed:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&family=Roboto+Condensed:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
-        .booking-section {
-            min-height: 100vh;
-            padding: 150px 25px 80px;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 25px;
         }
 
-        .booking-content {
+        body {
+            margin: 0;
+        }
+
+        .landing-header {
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .landing-header .logo img {
+            display: block;
+            max-width: 175px;
+            height: auto;
+        }
+
+        .landing-main {
+            padding: 35px 25px 70px;
+        }
+
+        .landing-container {
             width: 100%;
-            max-width: 1050px;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .offer-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 15px;
+            border: 1px solid rgba(200, 108, 255, 0.35);
+            border-radius: 50px;
+            background: rgba(200, 108, 255, 0.08);
+            color: #d9a1ff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .offer-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #c86cff;
+            flex-shrink: 0;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.65rem);
+            line-height: 1.17;
+            letter-spacing: -1.5px;
+            font-weight: 700;
+        }
+
+        .headline-accent {
+            color: #d39aff;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            margin: 23px auto 25px;
+            color: rgba(255, 255, 255, 0.76);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .hero-description strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            min-height: 54px;
+            padding: 14px 27px;
+            margin: 0 auto;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #c86cff, #a94df0);
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 28px rgba(200, 108, 255, 0.19);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 11px 32px rgba(200, 108, 255, 0.3);
+        }
+
+        .hero-cta .cta-arrow {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .cta-caption {
+            margin: 11px 0 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.82rem;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 34px;
+            max-width: 850px;
+            margin: 43px auto 0;
+            text-align: left;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+        }
+
+        .benefit-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 27px;
+            width: 27px;
+            height: 27px;
+            margin-top: 2px;
+            border-radius: 50%;
+            background: rgba(200, 108, 255, 0.12);
+            color: #d9a1ff;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .benefit h3 {
+            margin: 0 0 5px;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .benefit p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.64);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .booking-section {
+            margin: 58px auto 0;
+            padding-top: 38px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            scroll-margin-top: 20px;
+        }
+
+        .booking-heading {
+            max-width: 690px;
+            margin: 0 auto 28px;
             text-align: center;
         }
 
-        .booking-description {
-            max-width: 650px;
-            margin: 20px auto 45px;
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 1.05rem;
+        .booking-heading .eyebrow {
+            margin: 0 0 12px;
+            color: #d39aff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .booking-heading h2 {
+            margin: 0;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.7rem, 4vw, 2.35rem);
+            line-height: 1.3;
+        }
+
+        .booking-heading > p:last-child {
+            max-width: 590px;
+            margin: 14px auto 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
 
         .calendar-frame {
@@ -45,23 +240,198 @@
         }
 
         .booking-note {
-            margin-top: 22px;
+            margin: 20px auto 0;
             color: rgba(255, 255, 255, 0.55);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            text-align: center;
         }
 
         .booking-note a {
-            color: #c86cff;
+            color: #d39aff;
             text-decoration: none;
         }
 
+        .trust-strip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: 48px auto 0;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.025);
+            text-align: left;
+        }
+
+        .trust-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 42px;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(200, 108, 255, 0.12);
+            color: #d39aff;
+            font-size: 1.35rem;
+        }
+
+        .trust-strip h3 {
+            margin: 0 0 4px;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .trust-strip p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .offer-disclaimer {
+            max-width: 800px;
+            margin: 28px auto 0;
+            color: rgba(255, 255, 255, 0.46);
+            font-size: 0.78rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .landing-footer {
+            padding: 22px 20px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.45);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .landing-footer p {
+            margin: 0;
+        }
+
+        .landing-footer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        .landing-footer a:hover,
+        .booking-note a:hover {
+            color: #d39aff;
+        }
+
+        @media (min-width: 1200px) {
+            .landing-main {
+                padding-top: 40px;
+            }
+        }
+
         @media (max-width: 700px) {
+            .landing-header {
+                padding: 15px 18px;
+            }
+
+            .landing-header .logo img {
+                max-width: 150px;
+            }
+
+            .landing-main {
+                padding: 23px 18px 45px;
+            }
+
+            .offer-label {
+                margin-bottom: 19px;
+                padding: 8px 12px;
+                font-size: 0.67rem;
+                letter-spacing: 1px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8.5vw, 2.75rem);
+                line-height: 1.2;
+                letter-spacing: -0.8px;
+            }
+
+            .hero-description {
+                margin: 18px auto 21px;
+                font-size: 0.96rem;
+                line-height: 1.75;
+            }
+
+            .hero-cta {
+                width: 100%;
+                box-sizing: border-box;
+                min-height: 54px;
+                padding: 14px 18px;
+                font-size: 0.96rem;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 33px;
+            }
+
+            .benefit h3 {
+                font-size: 0.96rem;
+            }
+
+            .benefit p {
+                font-size: 0.88rem;
+            }
+
             .booking-section {
-                padding: 125px 15px 55px;
+                margin-top: 40px;
+                padding-top: 30px;
+            }
+
+            .booking-heading {
+                margin-bottom: 22px;
+            }
+
+            .booking-heading h2 {
+                font-size: 1.75rem;
+            }
+
+            .booking-heading > p:last-child {
+                font-size: 0.92rem;
             }
 
             .calendar-frame {
                 border-radius: 10px;
+            }
+
+            .trust-strip {
+                align-items: flex-start;
+                margin-top: 35px;
+                padding: 17px;
+            }
+
+            .trust-strip h3 {
+                font-size: 0.95rem;
+            }
+
+            .trust-strip p {
+                font-size: 0.83rem;
+            }
+
+            .offer-disclaimer {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .hero-cta {
+                transition: none;
             }
         }
     </style>
@@ -69,108 +439,212 @@
 
 <body>
 
-    <nav class="navbar">
+    <header class="landing-header">
         <div class="logo">
-            <a href="../index.html#home">
+            <a href="../index.html">
                 <img src="../Wiob Digital Logo.png" alt="Wiob Digital">
             </a>
         </div>
+    </header>
 
-        <a href="../index.html" class="button primary-button"
-           style="min-width: auto; min-height: 44px; padding: 10px 20px; font-size: 0.95rem;">
-            Back to Home
-        </a>
-    </nav>
+    <main class="landing-main">
+        <div class="landing-container">
 
-    <main class="booking-section">
-        <div class="booking-content">
+            <section class="hero">
 
-            <p class="eyebrow">LET'S CONNECT</p>
+                <p class="offer-label">
+                    <span class="offer-dot"></span>
+                    Limited-Time Performance-Based Offer
+                </p>
 
-            <h1 style="font-size: clamp(2.4rem, 6vw, 4rem);">
-                Book a Meeting
-            </h1>
+                <h1>
+                    Get More Qualified Private-Pay Families Booking Consultations
+                    <span class="headline-accent">Without Monthly Agency Retainers</span>
+                </h1>
 
-            <p class="booking-description">
-                Choose a convenient time to discuss your business,
-                advertising goals, and potential opportunities to work together.
-            </p>
+                <p class="hero-description">
+                    We handle your ads, quickly follow up with interested families,
+                    qualify them, and book consultations directly into your calendar
+                    — so you can focus on <strong>growing your home-care business</strong>
+                    and delivering great care.
+                </p>
 
-            <div class="calendar-frame">
-                <!-- Cal ID inline embed begins -->
-                <div id="my-cal-inline"></div>
+                <a class="hero-cta" href="#calendar-section">
+                    Book Your Free Strategy Call
+                    <span class="cta-arrow" aria-hidden="true">→</span>
+                </a>
 
-                <script type="text/javascript">
-                    (function (C, A, L) {
-                        let p = function (a, ar) { a.q.push(ar); };
-                        let d = C.document;
-                        C.Cal = C.Cal || function () {
-                            let cal = C.Cal;
-                            let ar = arguments;
+                <p class="cta-caption">
+                    No obligation. Let's explore the opportunity for your agency.
+                </p>
 
-                            if (!cal.loaded) {
-                                cal.ns = {};
-                                cal.q = cal.q || [];
-                                d.head.appendChild(d.createElement("script")).src = A;
-                                cal.loaded = true;
-                            }
+            </section>
 
-                            if (ar[0] === L) {
-                                const api = function () { p(api, arguments); };
-                                const namespace = ar[1];
-                                api.q = api.q || [];
+            <section class="benefits" aria-label="How our service works">
 
-                                if (typeof namespace === "string") {
-                                    cal.ns[namespace] = cal.ns[namespace] || api;
-                                    p(cal.ns[namespace], ar);
-                                    p(cal, ["initNamespace", namespace]);
-                                } else {
-                                    p(cal, ar);
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <h3>Qualified Consultations, Not Just Leads</h3>
+                        <p>
+                            We contact inquiries, understand their needs, and book
+                            suitable families onto your calendar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <h3>Fast Follow-Up</h3>
+                        <p>
+                            Interested families are contacted quickly, while they're
+                            still actively looking for care.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <h3>Performance-Based Pricing</h3>
+                        <p>
+                            No monthly agency retainer. We earn our fee when agreed,
+                            qualified consultations actually take place.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <h3>An Ad Budget That Works for You</h3>
+                        <p>
+                            We'll recommend a starting budget based on your goals
+                            and market, while remaining flexible about what fits
+                            your business.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="booking-section" id="calendar-section">
+
+                <div class="booking-heading">
+                    <p class="eyebrow">Your Next Step</p>
+
+                    <h2>Let's Map Out Your Agency's Growth Strategy</h2>
+
+                    <p>
+                        Book a free strategy call to discuss your client acquisition
+                        process, your growth goals, and how this system could work
+                        for your agency.
+                    </p>
+                </div>
+
+                <div class="calendar-frame">
+
+                    <!-- Cal ID inline embed begins -->
+                    <div id="my-cal-inline"></div>
+
+                    <script type="text/javascript">
+                        (function (C, A, L) {
+                            let p = function (a, ar) { a.q.push(ar); };
+                            let d = C.document;
+
+                            C.Cal = C.Cal || function () {
+                                let cal = C.Cal;
+                                let ar = arguments;
+
+                                if (!cal.loaded) {
+                                    cal.ns = {};
+                                    cal.q = cal.q || [];
+                                    d.head.appendChild(d.createElement("script")).src = A;
+                                    cal.loaded = true;
                                 }
 
-                                return;
-                            }
+                                if (ar[0] === L) {
+                                    const api = function () { p(api, arguments); };
+                                    const namespace = ar[1];
+                                    api.q = api.q || [];
 
-                            p(cal, ar);
-                        };
-                    })(window, "https://cal.id/embed-link/embed.js", "init");
+                                    if (typeof namespace === "string") {
+                                        cal.ns[namespace] = cal.ns[namespace] || api;
+                                        p(cal.ns[namespace], ar);
+                                        p(cal, ["initNamespace", namespace]);
+                                    } else {
+                                        p(cal, ar);
+                                    }
 
-                    Cal("init", "default", { origin: "https://cal.id" });
+                                    return;
+                                }
 
-                    Cal.ns["default"]("inline", {
-                        elementOrSelector: "#my-cal-inline",
-                        config: { layout: "month_view" },
-                        calLink: "bill/discovery-call-w-bill",
-                    });
+                                p(cal, ar);
+                            };
+                        })(window, "https://cal.id/embed-link/embed.js", "init");
 
-                    Cal.ns["default"]("ui", {
-                        cssVarsPerTheme: {
-                            light: { "cal-brand": "#c86cff" },
-                            dark: { "cal-brand": "#c86cff" }
-                        },
-                        hideEventTypeDetails: false,
-                        layout: "month_view"
-                    });
-                </script>
-                <!-- Cal ID inline embed ends -->
-            </div>
+                        Cal("init", "default", { origin: "https://cal.id" });
 
-            <p class="booking-note">
-                Having trouble booking?
-                <a href="mailto:info@wiobdigital.com">Contact us by email</a>.
+                        Cal.ns["default"]("inline", {
+                            elementOrSelector: "#my-cal-inline",
+                            config: { layout: "month_view" },
+                            calLink: "bill/discovery-call-w-bill",
+                        });
+
+                        Cal.ns["default"]("ui", {
+                            cssVarsPerTheme: {
+                                light: { "cal-brand": "#c86cff" },
+                                dark: { "cal-brand": "#c86cff" }
+                            },
+                            hideEventTypeDetails: false,
+                            layout: "month_view"
+                        });
+                    </script>
+                    <!-- Cal ID inline embed ends -->
+
+                </div>
+
+                <p class="booking-note">
+                    No obligation. We'll explore whether we're a good fit.
+                    Having trouble booking?
+                    <a href="mailto:info@wiobdigital.com">Contact us by email</a>.
+                </p>
+
+            </section>
+
+            <section class="trust-strip" aria-label="Marketing experience">
+
+                <div class="trust-icon" aria-hidden="true">✦</div>
+
+                <div>
+                    <h3>6+ Years of Marketing Experience</h3>
+                    <p>
+                        A performance-focused approach to helping businesses
+                        attract customers and grow.
+                    </p>
+                </div>
+
+            </section>
+
+            <p class="offer-disclaimer">
+                Limited-time offer. A small one-time setup fee applies.
+                Advertising spend is separate from our performance fee.
+                Qualification criteria and billing terms will be agreed upon
+                before launch.
             </p>
 
         </div>
     </main>
 
-    <footer class="site-footer">
-        <p>© 2026 Wiob Digital. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="../index.html#services">Services</a>
-            <a href="../index.html#about">About</a>
+    <footer class="landing-footer">
+        <p>
+            © 2026 Wiob Digital. All rights reserved.
+            &nbsp;·&nbsp;
             <a href="../privacy.html">Privacy Policy</a>
+            &nbsp;·&nbsp;
             <a href="../terms.html">Terms of Service</a>
-        </div>
+        </p>
     </footer>
 
 </body>
