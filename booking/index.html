@@ -434,6 +434,87 @@
                 transition: none;
             }
         }
+
+        /*
+         * Layout safeguards:
+         * The shared styles.css may apply flex/grid layouts to generic
+         * section elements. Keep this landing page's major sections vertical.
+         */
+        .landing-main .landing-container {
+            display: block !important;
+            width: 100%;
+        }
+
+        .landing-main .hero {
+            display: block !important;
+            width: 100%;
+            text-align: center;
+        }
+
+        .landing-main .hero > .offer-label,
+        .landing-main .hero > h1,
+        .landing-main .hero > .hero-description,
+        .landing-main .hero > .hero-cta,
+        .landing-main .hero > .cta-caption {
+            position: relative;
+            float: none !important;
+            clear: both;
+        }
+
+        .landing-main .hero > .offer-label {
+            display: inline-flex;
+        }
+
+        .landing-main .hero > h1,
+        .landing-main .hero > .hero-description,
+        .landing-main .hero > .cta-caption {
+            display: block;
+        }
+
+        .landing-main .benefits {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: 100%;
+        }
+
+        .landing-main .benefit {
+            display: flex !important;
+            min-width: 0;
+        }
+
+        .landing-main .booking-section {
+            display: block !important;
+            width: 100%;
+        }
+
+        .landing-main .booking-heading {
+            display: block !important;
+            width: 100%;
+            text-align: center;
+        }
+
+        .landing-main .calendar-frame {
+            display: block !important;
+            width: 100%;
+            clear: both;
+        }
+
+        .landing-main .booking-note {
+            display: block !important;
+            width: 100%;
+            text-align: center;
+        }
+
+        .landing-main .trust-strip {
+            display: flex !important;
+            width: auto;
+        }
+
+        @media (max-width: 700px) {
+            .landing-main .benefits {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
     </style>
 </head>
 
