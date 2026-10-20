@@ -307,11 +307,21 @@
             color: #d39aff;
         }
 
-        @media (min-width: 701px) {
+        
+@media (min-width: 701px) {
     .landing-main .hero {
-        margin-bottom: 60px;
+        min-height: 88vh !important;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        padding: 45px 0 55px !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.28);
     }
 }
+
 
         @media (max-width: 700px) {
             .landing-main .hero {
