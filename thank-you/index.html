@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,20 @@
     <meta name="description" content="Your strategy call is booked. Watch the introduction video and prepare for your meeting with Wiob Digital.">
 
     <link rel="stylesheet" href="../styles.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        .thank-you-section {
-            padding: 40px 20px 20px;
+        /* Keep shared stylesheet layout rules from adding unexpected spacing. */
+        body {
+            margin: 0;
+        }
+
+        body main.thank-you-section {
+            display: block;
+            width: 100%;
+            min-height: 0;
+            box-sizing: border-box;
+            padding: 42px 20px 18px !important;
         }
 
         .thank-you-content {
@@ -22,38 +31,44 @@
             width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            gap: 16px;
+            gap: 0;
         }
 
         /* Confirmation header */
-        .confirmation-header {
+        body .thank-you-content > .confirmation-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 0;
+            margin: 0 0 18px !important;
+            padding: 0 !important;
+            gap: 0;
         }
 
         .confirmation-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 0 6px;
+            box-sizing: border-box;
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+            margin: 0 0 8px !important;
+            padding: 0;
             border: 2px solid #c86cff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d9a1ff;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 600;
             background: rgba(200, 108, 255, 0.08);
         }
 
-        .confirmation-header h1 {
-            margin: 0;
+        body .thank-you-content > .confirmation-header h1 {
+            margin: 0 !important;
+            padding: 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+            font-size: clamp(2rem, 5vw, 2.8rem);
             line-height: 1.15;
         }
 
@@ -61,31 +76,38 @@
             color: #d39aff;
         }
 
-        .confirmation-description {
-            margin: 4px 0 0;
+        body .thank-you-content > .confirmation-header .confirmation-description {
+            margin: 6px 0 0 !important;
+            padding: 0;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             line-height: 1.4;
         }
 
         /* Step 1 and video */
-        .step-one {
+        body .thank-you-content > .step-one {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-bottom: 0;
+            margin: 0 0 16px !important;
+            padding: 0 !important;
         }
 
         .step-label {
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            margin: 0;
+            padding: 0;
         }
 
         .step-number {
-            flex: 0 0 30px;
-            width: 30px;
-            height: 30px;
+            box-sizing: border-box;
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            margin: 0;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -95,7 +117,7 @@
             color: #d9a1ff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .step-copy {
@@ -104,18 +126,20 @@
         }
 
         .step-copy h2 {
-            margin: 0 0 2px;
+            margin: 0 0 4px !important;
+            padding: 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.02rem;
-            line-height: 1.3;
+            font-size: 1.05rem;
+            line-height: 1.35;
         }
 
         .step-copy p {
-            margin: 0;
+            margin: 0 !important;
+            padding: 0;
             color: rgba(255, 255, 255, 0.76);
-            font-size: 0.88rem;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            line-height: 1.45;
         }
 
         .video-frame {
@@ -138,54 +162,63 @@
             border: 0;
         }
 
-        /* Steps 2 and 3: Compact snug fit */
-        .remaining-steps {
+        /* Steps 2 and 3: no boxes, compact two-column desktop layout */
+        body .thank-you-content > .remaining-steps {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
             align-items: start;
+            gap: 24px;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
-        .remaining-steps .step {
-            min-width: 0;
+        .remaining-steps > .step {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            padding: 8px 12px;
-            border: 1px solid rgba(200, 108, 255, 0.2);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.025);
+            align-items: stretch;
+            gap: 7px;
+            min-width: 0;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            border-radius: 0;
+            background: transparent !important;
+            box-shadow: none !important;
             height: auto;
-            align-self: start;
-            box-sizing: border-box;
         }
 
         .remaining-steps .step-label {
             gap: 10px;
         }
 
-        .remaining-steps .step-copy h2 {
-            margin: 0 0 2px;
-            font-size: 0.98rem;
-            line-height: 1.3;
+        .remaining-steps .step-number {
+            flex-basis: 30px;
+            width: 30px;
+            height: 30px;
+            font-size: 0.85rem;
         }
 
-        .remaining-steps .step-copy p {
-            font-size: 0.85rem;
+        .remaining-steps .step-copy h2 {
+            font-size: 1rem;
             line-height: 1.35;
         }
 
+        .remaining-steps .step-copy p {
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
         .step-details {
-            padding-left: 40px;
-            margin-top: 0;
+            margin: 0 !important;
+            padding: 0 0 0 40px !important;
         }
 
         .business-list {
             display: flex;
             flex-direction: column;
-            gap: 2px;
-            margin: 0;
-            padding: 0;
+            gap: 4px;
+            margin: 0 !important;
+            padding: 0 !important;
             list-style: none;
         }
 
@@ -193,9 +226,11 @@
             display: flex;
             align-items: flex-start;
             gap: 6px;
+            margin: 0;
+            padding: 0;
             color: rgba(255, 255, 255, 0.88);
-            font-size: 0.83rem;
-            line-height: 1.3;
+            font-size: 0.85rem;
+            line-height: 1.4;
         }
 
         .business-list li::before {
@@ -205,12 +240,13 @@
             font-weight: 700;
         }
 
-        /* Contact note and bottom logo */
-        .closing-note {
-            margin: 4px 0 0;
+        /* Contact note */
+        body .thank-you-content > .closing-note {
+            margin: 14px 0 0 !important;
+            padding: 0;
             color: rgba(255, 255, 255, 0.55);
             font-size: 0.82rem;
-            line-height: 1.4;
+            line-height: 1.5;
             text-align: center;
         }
 
@@ -223,19 +259,21 @@
             color: #ffffff;
         }
 
-        .thank-you-footer {
+        /* Footer and bottom logo */
+        body > footer.thank-you-footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
-            padding: 14px 20px 18px;
+            gap: 10px;
+            margin: 0;
+            padding: 16px 20px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             text-align: center;
         }
 
         .thank-you-footer .footer-logo img {
             display: block;
-            width: 120px;
+            width: 130px;
             max-width: 45vw;
             height: auto;
         }
@@ -244,47 +282,44 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
         }
 
         .thank-you-footer p {
             margin: 0;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
         }
 
-        /* Mobile layout fixes */
+        /* Mobile */
         @media (max-width: 600px) {
-            .thank-you-section {
-                padding: 12px 12px 14px;
+            body main.thank-you-section {
+                padding: 26px 14px 16px !important;
             }
 
-            .thank-you-content {
-                gap: 10px;
-            }
-
-            .confirmation-header {
-                margin-bottom: 0;
+            body .thank-you-content > .confirmation-header {
+                margin-bottom: 10px !important;
             }
 
             .confirmation-icon {
-                width: 34px;
-                height: 34px;
-                margin-bottom: 3px;
-                font-size: 1.1rem;
+                width: 38px;
+                height: 38px;
+                flex-basis: 38px;
+                margin-bottom: 5px !important;
+                font-size: 1.3rem;
             }
 
-            .confirmation-header h1 {
-                font-size: clamp(1.4rem, 6vw, 1.9rem);
+            body .thank-you-content > .confirmation-header h1 {
+                font-size: clamp(1.6rem, 6.5vw, 2.1rem);
             }
 
-            .confirmation-description {
-                font-size: 0.82rem;
-                margin-top: 2px;
+            body .thank-you-content > .confirmation-header .confirmation-description {
+                margin-top: 3px !important;
+                font-size: 0.85rem;
             }
 
-            .step-one {
-                gap: 6px;
-                margin-bottom: 0;
+            body .thank-you-content > .step-one {
+                gap: 8px;
+                margin-bottom: 13px !important;
             }
 
             .step-label {
@@ -292,66 +327,63 @@
             }
 
             .step-number {
-                flex-basis: 26px;
-                width: 26px;
-                height: 26px;
-                font-size: 0.78rem;
+                flex-basis: 28px;
+                width: 28px;
+                height: 28px;
+                font-size: 0.82rem;
             }
 
             .step-copy h2 {
-                font-size: 0.9rem;
-                line-height: 1.25;
+                font-size: 0.95rem;
+                line-height: 1.3;
             }
 
             .step-copy p {
-                font-size: 0.81rem;
-                line-height: 1.35;
+                font-size: 0.84rem;
+                line-height: 1.4;
             }
 
-            /* Stacked remaining steps with compact height on phone */
-            .remaining-steps {
+            body .thank-you-content > .remaining-steps {
                 grid-template-columns: minmax(0, 1fr);
-                gap: 8px;
+                gap: 13px;
             }
 
-            .remaining-steps .step {
-                gap: 3px;
-                padding: 6px 10px;
-                border-radius: 8px;
+            .remaining-steps > .step {
+                gap: 5px;
             }
 
             .remaining-steps .step-copy h2 {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
             .step-details {
-                padding-left: 34px;
+                padding-left: 36px !important;
             }
 
             .business-list {
-                gap: 2px;
+                gap: 3px;
             }
 
             .business-list li {
-                font-size: 0.8rem;
+                font-size: 0.82rem;
             }
 
             .video-frame {
                 border-radius: 8px;
             }
 
-            .closing-note {
-                margin-top: 2px;
-                font-size: 0.78rem;
+            body .thank-you-content > .closing-note {
+                margin-top: 12px !important;
+                font-size: 0.8rem;
             }
 
-            .thank-you-footer {
-                gap: 6px;
-                padding: 12px 12px 16px;
+            body > footer.thank-you-footer {
+                gap: 8px;
+                padding: 14px 14px 18px;
             }
 
             .thank-you-footer .footer-logo img {
-                width: 105px;
+                width: 115px;
             }
         }
 
@@ -371,9 +403,7 @@
             <header class="confirmation-header">
                 <div class="confirmation-icon" aria-hidden="true">✓</div>
 
-                <h1>
-                    Booking Confirmed<span>!</span>
-                </h1>
+                <h1>Booking Confirmed<span>!</span></h1>
 
                 <p class="confirmation-description">
                     Please complete these steps before our call.
@@ -466,3 +496,4 @@
 
 </body>
 </html>
+```
