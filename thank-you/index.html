@@ -13,7 +13,7 @@
 
     <style>
         .thank-you-section {
-            padding: 70px 20px 20px;
+            padding: 50px 20px 20px;
         }
 
         .thank-you-content {
@@ -30,20 +30,20 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
         }
 
         .confirmation-icon {
-            width: 46px;
-            height: 46px;
-            margin: 0 0 10px;
+            width: 44px;
+            height: 44px;
+            margin: 0 0 8px;
             border: 2px solid #c86cff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d9a1ff;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             background: rgba(200, 108, 255, 0.08);
         }
@@ -52,8 +52,8 @@
             margin: 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            line-height: 1.15;
         }
 
         .confirmation-header h1 span {
@@ -61,18 +61,18 @@
         }
 
         .confirmation-description {
-            margin: 8px 0 0;
+            margin: 6px 0 0;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.93rem;
-            line-height: 1.5;
+            font-size: 0.92rem;
+            line-height: 1.4;
         }
 
         /* Step 1 and video */
         .step-one {
             display: flex;
             flex-direction: column;
-            gap: 16px; /* Added spacing between text description and video player */
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 16px;
         }
 
         .step-label {
@@ -103,18 +103,18 @@
         }
 
         .step-copy h2 {
-            margin: 2px 0 5px;
+            margin: 0 0 4px;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.4;
+            font-size: 1.05rem;
+            line-height: 1.35;
         }
 
         .step-copy p {
             margin: 0;
             color: rgba(255, 255, 255, 0.76);
-            font-size: 0.91rem;
-            line-height: 1.55;
+            font-size: 0.9rem;
+            line-height: 1.45;
         }
 
         .video-frame {
@@ -137,11 +137,11 @@
             border: 0;
         }
 
-        /* Steps 2 and 3: side-by-side on desktop */
+        /* Steps 2 and 3: Compact snug fit */
         .remaining-steps {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
+            gap: 14px;
             align-items: start;
         }
 
@@ -149,34 +149,39 @@
             min-width: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Ensures content is vertically centered */
-            gap: 8px;
-            padding: 6px 18px; /* Reduced vertical padding significantly to shrink box height */
+            gap: 6px;
+            padding: 10px 14px; /* Significantly reduced to eliminate excess block height */
             border: 1px solid rgba(200, 108, 255, 0.2);
-            border-radius: 12px;
+            border-radius: 10px;
             background: rgba(255, 255, 255, 0.025);
             height: auto;
+            box-sizing: border-box;
         }
 
         .remaining-steps .step-label {
-            gap: 11px;
+            gap: 10px;
         }
 
         .remaining-steps .step-copy h2 {
-            margin-top: 1px;
-            font-size: 1.08rem;
+            margin: 0 0 3px;
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
+        .remaining-steps .step-copy p {
+            font-size: 0.88rem;
             line-height: 1.4;
         }
 
         .step-details {
-            padding-left: 43px;
-            margin-top: 0;
+            padding-left: 42px;
+            margin-top: 2px;
         }
 
         .business-list {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -185,10 +190,10 @@
         .business-list li {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 6px;
             color: rgba(255, 255, 255, 0.88);
-            font-size: 0.88rem;
-            line-height: 1.4;
+            font-size: 0.85rem;
+            line-height: 1.35;
         }
 
         .business-list li::before {
@@ -200,10 +205,10 @@
 
         /* Contact note and bottom logo */
         .closing-note {
-            margin: 18px 0 0;
+            margin: 14px 0 0;
             color: rgba(255, 255, 255, 0.55);
-            font-size: 0.85rem;
-            line-height: 1.6;
+            font-size: 0.82rem;
+            line-height: 1.5;
             text-align: center;
         }
 
@@ -220,15 +225,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
-            padding: 18px 20px 24px;
+            gap: 10px;
+            padding: 16px 20px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             text-align: center;
         }
 
         .thank-you-footer .footer-logo img {
             display: block;
-            width: 145px;
+            width: 130px;
             max-width: 45vw;
             height: auto;
         }
@@ -237,110 +242,110 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 16px;
+            gap: 14px;
         }
 
         .thank-you-footer p {
             margin: 0;
+            font-size: 0.85rem;
         }
 
-        /* Mobile layout */
+        /* Mobile layout fixes */
         @media (max-width: 600px) {
             .thank-you-section {
-                padding: 45px 16px 18px;
+                padding: 20px 14px 16px; /* Tight top padding on phones */
             }
 
-            /* Sliced margin in half on mobile so Step 1 starts higher */
             .confirmation-header {
-                margin-bottom: 8px;
+                margin-bottom: 4px; /* Minimal space before Step 1 starts */
             }
 
             .confirmation-icon {
-                width: 42px;
-                height: 42px;
-                margin-bottom: 8px;
-                font-size: 1.45rem;
+                width: 38px;
+                height: 38px;
+                margin-bottom: 4px;
+                font-size: 1.3rem;
             }
 
             .confirmation-header h1 {
-                font-size: clamp(1.8rem, 7vw, 2.4rem);
+                font-size: clamp(1.6rem, 6.5vw, 2.1rem);
             }
 
             .confirmation-description {
-                font-size: 0.88rem;
-                margin-top: 6px;
+                font-size: 0.85rem;
+                margin-top: 3px;
             }
 
             .step-one {
-                gap: 12px; /* Margin/gap between text and video on mobile */
-                margin-bottom: 16px;
+                gap: 8px;
+                margin-bottom: 12px;
             }
 
             .step-label {
-                gap: 10px;
+                gap: 8px;
             }
 
             .step-number {
-                flex-basis: 30px;
-                width: 30px;
-                height: 30px;
-                font-size: 0.85rem;
-            }
-
-            .step-copy h2 {
-                font-size: 1rem;
-                line-height: 1.4;
-            }
-
-            .step-copy p {
-                font-size: 0.87rem;
-                line-height: 1.5;
-            }
-
-            /* Keep the two steps stacked on phones */
-            .remaining-steps {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 10px;
-            }
-
-            .remaining-steps .step {
-                gap: 6px;
-                padding: 5px 14px; /* Reduced vertical padding for compact container height on mobile */
-                border-radius: 10px;
-            }
-
-            .remaining-steps .step-copy h2 {
-                font-size: 1rem;
-            }
-
-            .step-details {
-                padding-left: 40px;
-            }
-
-            .business-list {
-                gap: 4px;
-            }
-
-            .business-list li {
-                font-size: 0.86rem;
-            }
-
-            .video-frame {
-                border-radius: 9px;
-            }
-
-            .closing-note {
-                margin-top: 14px;
+                flex-basis: 28px;
+                width: 28px;
+                height: 28px;
                 font-size: 0.82rem;
             }
 
+            .step-copy h2 {
+                font-size: 0.95rem;
+                line-height: 1.3;
+            }
+
+            .step-copy p {
+                font-size: 0.84rem;
+                line-height: 1.4;
+            }
+
+            /* Stacked remaining steps with compact height on phone */
+            .remaining-steps {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 8px;
+            }
+
+            .remaining-steps .step {
+                gap: 4px;
+                padding: 8px 12px; /* Very tight vertical container padding */
+                border-radius: 8px;
+            }
+
+            .remaining-steps .step-copy h2 {
+                font-size: 0.95rem;
+            }
+
+            .step-details {
+                padding-left: 36px;
+            }
+
+            .business-list {
+                gap: 3px;
+            }
+
+            .business-list li {
+                font-size: 0.82rem;
+            }
+
+            .video-frame {
+                border-radius: 8px;
+            }
+
+            .closing-note {
+                margin-top: 10px;
+                font-size: 0.8rem;
+            }
+
             .thank-you-footer {
-                gap: 10px;
-                padding: 16px 16px 22px;
+                gap: 8px;
+                padding: 14px 14px 18px;
             }
 
             .thank-you-footer .footer-logo img {
-                width: 125px;
+                width: 115px;
             }
         }
 
