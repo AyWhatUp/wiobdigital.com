@@ -418,6 +418,23 @@
                 scroll-behavior: auto;
             }
         }
+        /* Add a little breathing room */
+body .thank-you-content > section.step-one {
+    gap: 12px !important;
+    margin-bottom: 18px !important;
+}
+
+/* Space between Steps 2 and 3 — mobile only */
+@media (max-width: 700px) {
+    body .thank-you-content > div.remaining-steps {
+        gap: 14px !important;
+    }
+}
+
+/* Space below the steps */
+body .thank-you-content > div.remaining-steps {
+    margin-bottom: 16px !important;
+}
     </style>
 </head>
 
