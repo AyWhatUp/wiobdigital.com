@@ -13,7 +13,6 @@
 
     <style>
         .thank-you-section {
-            /* Increased top padding from 38px to 70px to push top header down */
             padding: 70px 20px 20px;
         }
 
@@ -72,8 +71,8 @@
         .step-one {
             display: flex;
             flex-direction: column;
-            gap: 9px;
-            margin-bottom: 24px;
+            gap: 16px; /* Added spacing between text description and video player */
+            margin-bottom: 20px;
         }
 
         .step-label {
@@ -143,15 +142,16 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
-            align-items: start; /* Prevents boxes from stretching vertically to match height */
+            align-items: start;
         }
 
         .remaining-steps .step {
             min-width: 0;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            padding: 18px;
+            justify-content: center; /* Ensures content is vertically centered */
+            gap: 8px;
+            padding: 6px 18px; /* Reduced vertical padding significantly to shrink box height */
             border: 1px solid rgba(200, 108, 255, 0.2);
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.025);
@@ -170,13 +170,13 @@
 
         .step-details {
             padding-left: 43px;
-            margin-top: 2px;
+            margin-top: 0;
         }
 
         .business-list {
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 5px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -188,7 +188,7 @@
             gap: 8px;
             color: rgba(255, 255, 255, 0.88);
             font-size: 0.88rem;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .business-list li::before {
@@ -200,7 +200,7 @@
 
         /* Contact note and bottom logo */
         .closing-note {
-            margin: 20px 0 0;
+            margin: 18px 0 0;
             color: rgba(255, 255, 255, 0.55);
             font-size: 0.85rem;
             line-height: 1.6;
@@ -247,12 +247,12 @@
         /* Mobile layout */
         @media (max-width: 600px) {
             .thank-you-section {
-                /* Pushed top spacing down on mobile as well */
-                padding: 50px 16px 18px;
+                padding: 45px 16px 18px;
             }
 
+            /* Sliced margin in half on mobile so Step 1 starts higher */
             .confirmation-header {
-                margin-bottom: 16px;
+                margin-bottom: 8px;
             }
 
             .confirmation-icon {
@@ -272,7 +272,7 @@
             }
 
             .step-one {
-                gap: 8px;
+                gap: 12px; /* Margin/gap between text and video on mobile */
                 margin-bottom: 16px;
             }
 
@@ -300,12 +300,12 @@
             /* Keep the two steps stacked on phones */
             .remaining-steps {
                 grid-template-columns: minmax(0, 1fr);
-                gap: 12px;
+                gap: 10px;
             }
 
             .remaining-steps .step {
-                gap: 8px;
-                padding: 14px;
+                gap: 6px;
+                padding: 5px 14px; /* Reduced vertical padding for compact container height on mobile */
                 border-radius: 10px;
             }
 
@@ -318,7 +318,7 @@
             }
 
             .business-list {
-                gap: 5px;
+                gap: 4px;
             }
 
             .business-list li {
@@ -330,7 +330,7 @@
             }
 
             .closing-note {
-                margin-top: 16px;
+                margin-top: 14px;
                 font-size: 0.82rem;
             }
 
