@@ -14,7 +14,7 @@
 
     <style>
         .thank-you-section {
-            padding: 35px 20px 65px;
+            padding: 18px 20px 35px;
         }
 
         .thank-you-content {
@@ -30,20 +30,20 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }
 
         .confirmation-icon {
-            width: 52px;
-            height: 52px;
-            margin: 0 0 14px;
+            width: 46px;
+            height: 46px;
+            margin: 0 0 10px;
             border: 2px solid #c86cff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d9a1ff;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
             background: rgba(200, 108, 255, 0.08);
         }
@@ -61,17 +61,17 @@
         }
 
         .confirmation-description {
-            margin: 10px 0 0;
+            margin: 8px 0 0;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.93rem;
+            line-height: 1.5;
         }
 
         .step-one {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 26px;
+            gap: 9px;
+            margin-bottom: 11px;
         }
 
         .step-label {
@@ -102,22 +102,18 @@
         }
 
         .step-copy h2 {
-            margin: 2px 0 5px;
+            margin: 2px 0 4px;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.4;
         }
 
         .step-copy p {
             margin: 0;
             color: rgba(255, 255, 255, 0.72);
-            font-size: 0.92rem;
-            line-height: 1.65;
-        }
-
-        .step-one .step-number {
-            box-shadow: 0 0 18px rgba(200, 108, 255, 0.12);
+            font-size: 0.91rem;
+            line-height: 1.55;
         }
 
         .video-frame {
@@ -128,7 +124,7 @@
             border: 1px solid rgba(200, 108, 255, 0.3);
             border-radius: 12px;
             background: #111111;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         }
 
         .video-frame iframe {
@@ -143,36 +139,24 @@
         .remaining-steps {
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 9px;
         }
 
         .step {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 6px;
         }
 
         .step-details {
             padding-left: 44px;
         }
 
-        .step-details p {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.72);
-            font-size: 0.92rem;
-            line-height: 1.7;
-        }
-
-        .step-details strong {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
         .business-list {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px 18px;
-            margin: 14px 0 0;
+            gap: 6px 16px;
+            margin: 5px 0 0;
             padding: 0;
             list-style: none;
         }
@@ -180,10 +164,10 @@
         .business-list li {
             display: flex;
             align-items: flex-start;
-            gap: 9px;
+            gap: 8px;
             color: rgba(255, 255, 255, 0.88);
-            font-size: 0.9rem;
-            line-height: 1.55;
+            font-size: 0.88rem;
+            line-height: 1.5;
         }
 
         .business-list li::before {
@@ -194,10 +178,10 @@
         }
 
         .closing-note {
-            margin: 28px 0 0;
+            margin: 18px 0 0;
             color: rgba(255, 255, 255, 0.55);
-            font-size: 0.86rem;
-            line-height: 1.7;
+            font-size: 0.85rem;
+            line-height: 1.6;
             text-align: center;
         }
 
@@ -210,45 +194,109 @@
             color: #ffffff;
         }
 
+        .thank-you-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 20px 26px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+        }
+
+        .thank-you-footer .footer-logo img {
+            display: block;
+            width: 145px;
+            max-width: 45vw;
+            height: auto;
+        }
+
+        .thank-you-footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .thank-you-footer p {
+            margin: 0;
+        }
+
         @media (max-width: 600px) {
             .thank-you-section {
-                padding: 25px 16px 45px;
+                padding: 12px 16px 28px;
             }
 
             .confirmation-header {
-                margin-bottom: 22px;
+                margin-bottom: 13px;
             }
 
             .confirmation-icon {
-                width: 46px;
-                height: 46px;
-                font-size: 1.6rem;
+                width: 42px;
+                height: 42px;
+                margin-bottom: 8px;
+                font-size: 1.45rem;
+            }
+
+            .confirmation-header h1 {
+                font-size: clamp(1.8rem, 7vw, 2.4rem);
             }
 
             .confirmation-description {
-                font-size: 0.9rem;
+                font-size: 0.88rem;
+            }
+
+            .step-one {
+                margin-bottom: 10px;
+            }
+
+            .step-label {
+                gap: 10px;
+            }
+
+            .step-number {
+                flex-basis: 30px;
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
             }
 
             .step-copy h2 {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
 
-            .step-copy p,
-            .step-details p {
-                font-size: 0.88rem;
+            .step-copy p {
+                font-size: 0.87rem;
+                line-height: 1.5;
+            }
+
+            .remaining-steps {
+                gap: 10px;
             }
 
             .step-details {
                 padding-left: 0;
             }
 
+            .business-list {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .business-list li {
+                font-size: 0.86rem;
+            }
+
             .video-frame {
                 border-radius: 9px;
             }
 
-            .business-list {
-                grid-template-columns: 1fr;
-                gap: 9px;
+            .thank-you-footer {
+                padding: 18px 16px 22px;
+            }
+
+            .thank-you-footer .footer-logo img {
+                width: 125px;
             }
         }
 
@@ -261,14 +309,6 @@
 </head>
 
 <body>
-
-    <nav class="navbar">
-        <div class="logo">
-            <a href="../index.html#home">
-                <img src="../Wiob Digital Logo.png" alt="Wiob Digital">
-            </a>
-        </div>
-    </nav>
 
     <main class="thank-you-section">
         <div class="thank-you-content">
@@ -316,9 +356,9 @@
                         <div class="step-copy">
                             <h2>Add the Meeting to Your Calendar</h2>
                             <p>
-                                Accept the calendar invitation and set a reminder on your phone.
-                                Your meeting link is in your confirmation email — check your
-                                spam or junk folder if you can't find it.
+                                Accept the invitation and set a phone reminder. Your meeting
+                                link is in your confirmation email — check your spam or junk
+                                folder if needed.
                             </p>
                         </div>
                     </div>
@@ -330,8 +370,7 @@
                         <div class="step-copy">
                             <h2>Bring Your Business Numbers</h2>
                             <p>
-                                Have approximate figures ready for our call. This will help us
-                                understand your current situation and growth goals.
+                                Approximate figures are fine. Please have these ready:
                             </p>
                         </div>
                     </div>
@@ -342,7 +381,7 @@
                             <li>Approximate profit margin</li>
                             <li>Monthly leads and their sources</li>
                             <li>Target monthly revenue</li>
-                            <li>Number of caregivers on your team</li>
+                            <li>Number of caregivers</li>
                         </ul>
                     </div>
                 </section>
@@ -357,8 +396,13 @@
         </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="thank-you-footer">
+        <a class="footer-logo" href="../index.html#home">
+            <img src="../Wiob Digital Logo.png" alt="Wiob Digital">
+        </a>
+
         <p>© 2026 Wiob Digital. All rights reserved.</p>
+
         <div class="footer-links">
             <a href="../privacy.html">Privacy Policy</a>
             <a href="../terms.html">Terms of Service</a>
