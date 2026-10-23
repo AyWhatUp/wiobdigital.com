@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +14,24 @@
 
     <style>
         .thank-you-section {
-            padding: 18px 20px 35px;
+            padding: 38px 20px 20px;
         }
 
         .thank-you-content {
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 760px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
+        /* Confirmation header */
         .confirmation-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
         .confirmation-icon {
@@ -67,11 +68,12 @@
             line-height: 1.5;
         }
 
+        /* Step 1 and video */
         .step-one {
             display: flex;
             flex-direction: column;
             gap: 9px;
-            margin-bottom: 11px;
+            margin-bottom: 18px;
         }
 
         .step-label {
@@ -102,7 +104,7 @@
         }
 
         .step-copy h2 {
-            margin: 2px 0 4px;
+            margin: 2px 0 5px;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
@@ -111,7 +113,7 @@
 
         .step-copy p {
             margin: 0;
-            color: rgba(255, 255, 255, 0.72);
+            color: rgba(255, 255, 255, 0.76);
             font-size: 0.91rem;
             line-height: 1.55;
         }
@@ -136,27 +138,44 @@
             border: 0;
         }
 
+        /* Steps 2 and 3: side-by-side on desktop */
         .remaining-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 9px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            align-items: stretch;
         }
 
-        .step {
+        .remaining-steps .step {
+            min-width: 0;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 10px;
+            padding: 18px;
+            border: 1px solid rgba(200, 108, 255, 0.2);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .remaining-steps .step-label {
+            gap: 11px;
+        }
+
+        .remaining-steps .step-copy h2 {
+            margin-top: 1px;
+            font-size: 1.08rem;
+            line-height: 1.4;
         }
 
         .step-details {
-            padding-left: 44px;
+            padding-left: 43px;
         }
 
         .business-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 6px 16px;
-            margin: 5px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin: 0;
             padding: 0;
             list-style: none;
         }
@@ -177,8 +196,9 @@
             font-weight: 700;
         }
 
+        /* Contact note and bottom logo */
         .closing-note {
-            margin: 18px 0 0;
+            margin: 15px 0 0;
             color: rgba(255, 255, 255, 0.55);
             font-size: 0.85rem;
             line-height: 1.6;
@@ -199,7 +219,7 @@
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            padding: 20px 20px 26px;
+            padding: 18px 20px 24px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             text-align: center;
         }
@@ -222,13 +242,14 @@
             margin: 0;
         }
 
+        /* Mobile layout */
         @media (max-width: 600px) {
             .thank-you-section {
-                padding: 12px 16px 28px;
+                padding: 27px 16px 18px;
             }
 
             .confirmation-header {
-                margin-bottom: 13px;
+                margin-bottom: 7px;
             }
 
             .confirmation-icon {
@@ -244,10 +265,12 @@
 
             .confirmation-description {
                 font-size: 0.88rem;
+                margin-top: 6px;
             }
 
             .step-one {
-                margin-bottom: 10px;
+                gap: 8px;
+                margin-bottom: 13px;
             }
 
             .step-label {
@@ -263,6 +286,7 @@
 
             .step-copy h2 {
                 font-size: 1rem;
+                line-height: 1.4;
             }
 
             .step-copy p {
@@ -270,16 +294,27 @@
                 line-height: 1.5;
             }
 
+            /* Keep the two steps stacked on phones */
             .remaining-steps {
+                grid-template-columns: minmax(0, 1fr);
                 gap: 10px;
             }
 
+            .remaining-steps .step {
+                gap: 8px;
+                padding: 14px;
+                border-radius: 10px;
+            }
+
+            .remaining-steps .step-copy h2 {
+                font-size: 1rem;
+            }
+
             .step-details {
-                padding-left: 0;
+                padding-left: 40px;
             }
 
             .business-list {
-                grid-template-columns: 1fr;
                 gap: 5px;
             }
 
@@ -291,8 +326,14 @@
                 border-radius: 9px;
             }
 
+            .closing-note {
+                margin-top: 12px;
+                font-size: 0.82rem;
+            }
+
             .thank-you-footer {
-                padding: 18px 16px 22px;
+                gap: 10px;
+                padding: 16px 16px 22px;
             }
 
             .thank-you-footer .footer-logo img {
@@ -411,3 +452,4 @@
 
 </body>
 </html>
+```
