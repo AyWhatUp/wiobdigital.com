@@ -6,59 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Booking Confirmed | Wiob Digital</title>
-    <meta name="description" content="Your strategy call is booked! Watch the video and follow these three steps to prepare for your meeting with Wiob Digital.">
+    <meta name="description" content="Your strategy call is booked. Watch the introduction video and prepare for your meeting with Wiob Digital.">
 
     <link rel="stylesheet" href="../styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         .thank-you-section {
-            padding: 65px 20px 80px;
+            padding: 35px 20px 65px;
         }
 
         .thank-you-content {
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            max-width: 850px;
+            max-width: 760px;
             margin: 0 auto;
         }
 
+        .confirmation-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
         .confirmation-icon {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 20px;
+            width: 52px;
+            height: 52px;
+            margin: 0 0 14px;
             border: 2px solid #c86cff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #d9a1ff;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             background: rgba(200, 108, 255, 0.08);
-            box-shadow: 0 0 30px rgba(200, 108, 255, 0.1);
-        }
-
-        .confirmation-header {
-            text-align: center;
-            margin-bottom: 36px;
-        }
-
-        .confirmation-header .eyebrow {
-            margin: 0 0 12px;
-            color: #d39aff;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
         }
 
         .confirmation-header h1 {
             margin: 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             line-height: 1.2;
         }
 
@@ -67,103 +61,63 @@
         }
 
         .confirmation-description {
-            max-width: 650px;
-            margin: 18px auto 0;
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 1rem;
-            line-height: 1.75;
+            margin: 10px 0 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .steps-heading {
-            margin: 0 0 18px;
-            color: #ffffff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            line-height: 1.4;
-        }
-
-        .steps-list {
+        .step-one {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin-bottom: 36px;
+            gap: 12px;
+            margin-bottom: 26px;
         }
 
-        .step-card {
+        .step-label {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.035);
+            gap: 12px;
         }
 
         .step-number {
-            flex: 0 0 36px;
-            width: 36px;
-            height: 36px;
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: rgba(200, 108, 255, 0.14);
-            border: 1px solid rgba(200, 108, 255, 0.35);
+            background: rgba(200, 108, 255, 0.16);
+            border: 1px solid rgba(200, 108, 255, 0.4);
             color: #d9a1ff;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
             font-weight: 700;
+            font-size: 0.9rem;
         }
 
-        .step-content {
+        .step-copy {
             flex: 1;
             min-width: 0;
         }
 
-        .step-content h3 {
-            margin: 3px 0 7px;
-            color: #ffffff;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.02rem;
-            font-weight: 700;
-            line-height: 1.5;
-        }
-
-        .step-content p {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.72);
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.93rem;
-            line-height: 1.7;
-        }
-
-        .step-content strong {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .video-section {
-            margin: 0 0 36px;
-        }
-
-        .video-heading {
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
-        .video-heading h2 {
-            margin: 0 0 8px;
+        .step-copy h2 {
+            margin: 2px 0 5px;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-            line-height: 1.35;
+            font-size: 1.15rem;
+            line-height: 1.4;
         }
 
-        .video-heading p {
+        .step-copy p {
             margin: 0;
-            color: rgba(255, 255, 255, 0.68);
-            font-size: 0.94rem;
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        .step-one .step-number {
+            box-shadow: 0 0 18px rgba(200, 108, 255, 0.12);
         }
 
         .video-frame {
@@ -172,9 +126,9 @@
             aspect-ratio: 16 / 9;
             overflow: hidden;
             border: 1px solid rgba(200, 108, 255, 0.3);
-            border-radius: 14px;
+            border-radius: 12px;
             background: #111111;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
         }
 
         .video-frame iframe {
@@ -186,47 +140,53 @@
             border: 0;
         }
 
-        .preparation-box {
-            padding: 24px;
-            border: 1px solid rgba(200, 108, 255, 0.25);
-            border-radius: 14px;
-            background: rgba(200, 108, 255, 0.055);
+        .remaining-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
         }
 
-        .preparation-box h2 {
-            margin: 0 0 8px;
-            color: #ffffff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            line-height: 1.4;
+        .step {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .preparation-box > p {
-            margin: 0 0 18px;
+        .step-details {
+            padding-left: 44px;
+        }
+
+        .step-details p {
+            margin: 0;
             color: rgba(255, 255, 255, 0.72);
-            font-size: 0.93rem;
+            font-size: 0.92rem;
             line-height: 1.7;
         }
 
-        .preparation-list {
+        .step-details strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .business-list {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin: 0;
+            gap: 10px 18px;
+            margin: 14px 0 0;
             padding: 0;
             list-style: none;
         }
 
-        .preparation-list li {
+        .business-list li {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.92rem;
-            line-height: 1.6;
+            gap: 9px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.9rem;
+            line-height: 1.55;
         }
 
-        .preparation-list li::before {
+        .business-list li::before {
             content: "✓";
             flex: 0 0 auto;
             color: #d39aff;
@@ -236,7 +196,7 @@
         .closing-note {
             margin: 28px 0 0;
             color: rgba(255, 255, 255, 0.55);
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             line-height: 1.7;
             text-align: center;
         }
@@ -252,62 +212,43 @@
 
         @media (max-width: 600px) {
             .thank-you-section {
-                padding: 35px 16px 55px;
+                padding: 25px 16px 45px;
             }
 
             .confirmation-header {
-                margin-bottom: 28px;
+                margin-bottom: 22px;
             }
 
             .confirmation-icon {
-                width: 56px;
-                height: 56px;
-                margin-bottom: 16px;
+                width: 46px;
+                height: 46px;
+                font-size: 1.6rem;
             }
 
             .confirmation-description {
-                font-size: 0.94rem;
-            }
-
-            .steps-heading {
-                font-size: 1.15rem;
-            }
-
-            .step-card {
-                gap: 12px;
-                padding: 16px 14px;
-            }
-
-            .step-number {
-                flex-basis: 32px;
-                width: 32px;
-                height: 32px;
                 font-size: 0.9rem;
             }
 
-            .step-content h3 {
-                font-size: 0.96rem;
+            .step-copy h2 {
+                font-size: 1.05rem;
             }
 
-            .step-content p {
+            .step-copy p,
+            .step-details p {
                 font-size: 0.88rem;
             }
 
+            .step-details {
+                padding-left: 0;
+            }
+
             .video-frame {
-                border-radius: 10px;
+                border-radius: 9px;
             }
 
-            .preparation-box {
-                padding: 19px 16px;
-            }
-
-            .preparation-box h2 {
-                font-size: 1.15rem;
-            }
-
-            .preparation-list {
+            .business-list {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 9px;
             }
         }
 
@@ -335,75 +276,31 @@
             <header class="confirmation-header">
                 <div class="confirmation-icon" aria-hidden="true">✓</div>
 
-                <p class="eyebrow">YOUR APPOINTMENT IS BOOKED</p>
-
                 <h1>
-                    Booking Confirmed<span>!</span><br>
-                    <span>Here's What to Do Next</span>
+                    Booking Confirmed<span>!</span>
                 </h1>
 
                 <p class="confirmation-description">
-                    Before our call, please take a few minutes to complete these
-                    three steps. They'll help you get the most out of our conversation
-                    and allow us to focus on what matters most to your agency.
+                    Please complete these steps before our call.
                 </p>
             </header>
 
-            <h2 class="steps-heading">Important: 3 Steps Before Our Call</h2>
-
-            <div class="steps-list">
-
-                <div class="step-card">
+            <section class="step-one">
+                <div class="step-label">
                     <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Watch the Video Below</h3>
+                    <div class="step-copy">
+                        <h2>First, Watch This Video</h2>
                         <p>
-                            I'll introduce myself, explain what to expect from our call,
-                            and give you a better idea of how we may be able to help
-                            your home care agency. <strong>You'll get to meet me before we speak.</strong>
+                            I'll introduce myself and explain what to expect from our call.
+                            You'll get to meet me before we speak.
                         </p>
                     </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Add the Meeting to Your Calendar</h3>
-                        <p>
-                            Accept the calendar invitation and set a reminder or alarm
-                            on your phone so you don't miss our call. Your meeting link
-                            is in your confirmation email. If you can't find it, check
-                            your spam or junk folder.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Come Prepared With Your Business Numbers</h3>
-                        <p>
-                            You don't need perfect figures, but having approximate
-                            numbers ready will help us assess your current situation
-                            and identify the best opportunities for growth.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <section class="video-section" aria-labelledby="video-title">
-                <div class="video-heading">
-                    <h2 id="video-title">First, Watch This Video</h2>
-                    <p>
-                        Take a moment to watch before our call.
-                    </p>
                 </div>
 
                 <div class="video-frame">
                     <iframe
                         src="https://www.awesomescreenshot.com/embed?id=57699095&shareKey=5b9ef5dd86cc27a7bbe9e0311d9357dd"
-                        title="Introduction and preparation for your Wiob Digital strategy call"
+                        title="Introduction to your Wiob Digital strategy call"
                         allowfullscreen
                         webkitallowfullscreen
                         mozallowfullscreen>
@@ -411,25 +308,50 @@
                 </div>
             </section>
 
-            <section class="preparation-box" aria-labelledby="preparation-title">
-                <h2 id="preparation-title">Your Business Numbers Checklist</h2>
-                <p>
-                    Have these figures handy for our call. Rough estimates are absolutely fine.
-                </p>
+            <div class="remaining-steps">
 
-                <ul class="preparation-list">
-                    <li>Current monthly revenue</li>
-                    <li>Approximate profit margin</li>
-                    <li>Current leads per month and their sources</li>
-                    <li>Your target monthly revenue</li>
-                    <li>Number of caregivers on your team</li>
-                </ul>
-            </section>
+                <section class="step">
+                    <div class="step-label">
+                        <div class="step-number">2</div>
+                        <div class="step-copy">
+                            <h2>Add the Meeting to Your Calendar</h2>
+                            <p>
+                                Accept the calendar invitation and set a reminder on your phone.
+                                Your meeting link is in your confirmation email — check your
+                                spam or junk folder if you can't find it.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="step">
+                    <div class="step-label">
+                        <div class="step-number">3</div>
+                        <div class="step-copy">
+                            <h2>Bring Your Business Numbers</h2>
+                            <p>
+                                Have approximate figures ready for our call. This will help us
+                                understand your current situation and growth goals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-details">
+                        <ul class="business-list">
+                            <li>Current monthly revenue</li>
+                            <li>Approximate profit margin</li>
+                            <li>Monthly leads and their sources</li>
+                            <li>Target monthly revenue</li>
+                            <li>Number of caregivers on your team</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
 
             <p class="closing-note">
-                Need help or can't find your meeting details?
+                Questions or trouble finding your meeting details?
                 <a href="mailto:info@wiobdigital.com">Contact us by email</a>.
-                Looking forward to speaking with you!
             </p>
 
         </div>
