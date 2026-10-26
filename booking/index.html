@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home Care Agency Growth | Wiob Digital</title>
-    <meta name="description" content="Get more qualified private-pay family consultations for your home care agency with performance-based marketing, fast follow-up, and no monthly agency retainer.">
+    <meta name="description" content="Grow your homecare agency with qualified booked consultations. $500 one-time setup fee plus $100 per qualified booked consultation.">
 
     <link rel="stylesheet" href="../styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&family=Roboto+Condensed:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
-        .landing-main .hero {
-    min-height: auto !important;
-    padding: 35px 0 0 !important;
-    align-items: initial;
-    justify-content: initial;
-}
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 20px;
@@ -36,12 +30,20 @@
             width: 100%;
             max-width: 1050px;
             margin: 0 auto;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .hero {
-            text-align: center;
-            max-width: 980px;
+        .landing-main .hero {
+            display: block !important;
+            width: 100%;
+            min-height: auto !important;
+            box-sizing: border-box;
+            padding: 24px 0 0 !important;
             margin: 0 auto;
+            border-bottom: none;
+            text-align: center;
         }
 
         .offer-label {
@@ -58,8 +60,7 @@
             font-weight: 700;
             letter-spacing: 1.3px;
             text-transform: uppercase;
-            margin-top: 0;
-            margin-bottom: 14px;
+            margin: 0 0 14px;
         }
 
         .offer-dot {
@@ -71,12 +72,12 @@
         }
 
         .hero h1 {
-            max-width: 980px;
+            max-width: 900px;
             margin: 0 auto;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.1rem, 4.3vw, 3.3rem);
+            font-size: clamp(2rem, 4vw, 3rem);
             line-height: 1.15;
-            letter-spacing: -1.2px;
+            letter-spacing: -1px;
             font-weight: 700;
         }
 
@@ -85,27 +86,22 @@
         }
 
         .hero-description {
-            max-width: 860px;
-            margin: 14px auto 20px;
-            color: rgba(255, 255, 255, 0.8);
+            max-width: 760px;
+            margin: 14px auto 18px;
+            color: rgba(255, 255, 255, 0.9);
             font-family: 'Open Sans', sans-serif;
-            font-size: 1.02rem;
-            line-height: 1.65;
-        }
-
-        .hero-description strong {
-            color: #ffffff;
+            font-size: 1.05rem;
+            line-height: 1.6;
             font-weight: 600;
         }
 
-        /* Compact Checkpoints List */
         .benefits {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px 20px;
+            gap: 10px 16px;
             max-width: 950px;
-            margin: 0 auto 24px;
+            margin: 0 auto 20px;
             padding: 0;
             text-align: left;
         }
@@ -143,90 +139,35 @@
             white-space: nowrap;
         }
 
-        .hero-cta-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            margin: 0 auto;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            min-height: 50px;
-            padding: 12px 28px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #c86cff, #a94df0);
-            color: #ffffff;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(200, 108, 255, 0.22);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(200, 108, 255, 0.35);
-        }
-
-        .hero-cta .cta-arrow {
-            font-size: 1.15rem;
-            line-height: 1;
-        }
-
-        .cta-caption {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.8rem;
-        }
-
         .booking-section {
-            margin: 35px auto 0;
-            padding-top: 28px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: block !important;
+            width: 100%;
+            margin: 8px auto 0;
+            padding-top: 0;
+            border-top: none;
             scroll-margin-top: 15px;
         }
 
         .booking-heading {
             max-width: 680px;
-            margin: 0 auto 22px;
+            margin: 0 auto 14px;
             text-align: center;
-        }
-
-        .booking-heading .eyebrow {
-            margin: 0 0 8px;
-            color: #d39aff;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 0.74rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
         }
 
         .booking-heading h2 {
             margin: 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.6rem, 3.8vw, 2.2rem);
-            line-height: 1.25;
-        }
-
-        .booking-heading > p:last-child {
-            max-width: 580px;
-            margin: 10px auto 0;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.94rem;
-            line-height: 1.6;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 1.4;
+            font-weight: 600;
         }
 
         .calendar-frame {
+            display: block !important;
             width: 100%;
             overflow: hidden;
+            clear: both;
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 14px;
         }
@@ -255,7 +196,7 @@
             align-items: center;
             justify-content: center;
             gap: 16px;
-            margin: 40px auto 0;
+            margin: 28px auto 0;
             padding: 10px 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 30px;
@@ -307,46 +248,30 @@
             color: #d39aff;
         }
 
-        
+        @media (min-width: 701px) {
+            .landing-main .hero {
+                padding-top: 28px !important;
+            }
 
-@media (min-width: 701px) {
-    .landing-main .hero {
-        min-height: auto !important;
-        box-sizing: border-box;
-        padding: 35px 0 0 !important;
-        margin-bottom: 0;
-        border-bottom: none;
-    }
-
-    .landing-main .hero-description {
-        margin-top: 25px;
-        margin-bottom: 30px;
-    }
-
-    .landing-main .benefits {
-        margin-bottom: 38px;
-    }
-
-    .landing-main .booking-section {
-        margin-top: 35px;
-    }
-}
-
-
+            .landing-main .booking-section {
+                margin-top: 8px;
+            }
+        }
 
         @media (max-width: 700px) {
-            .landing-main .hero {
-    padding-top: 18px !important;
-}
-    body {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-    }
+            body {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
 
-    .landing-main {
-    padding: 0 15px 35px !important;
-    margin-top: 0 !important;
-}
+            .landing-main {
+                padding: 0 15px 35px !important;
+                margin-top: 0 !important;
+            }
+
+            .landing-main .hero {
+                padding-top: 18px !important;
+            }
 
             .offer-label {
                 margin-bottom: 12px;
@@ -355,21 +280,22 @@
             }
 
             .hero h1 {
-                font-size: clamp(1.85rem, 7.5vw, 2.5rem);
+                font-size: clamp(1.8rem, 7vw, 2.35rem);
                 line-height: 1.18;
+                letter-spacing: -0.6px;
             }
 
             .hero-description {
                 margin: 12px auto 16px;
-                font-size: 0.92rem;
-                line-height: 1.6;
+                font-size: 0.94rem;
+                line-height: 1.5;
             }
 
             .benefits {
                 flex-direction: column;
                 align-items: stretch;
                 gap: 8px;
-                margin-bottom: 20px;
+                margin-bottom: 16px;
             }
 
             .benefit {
@@ -383,21 +309,17 @@
                 font-size: 0.84rem;
             }
 
-            .hero-cta {
-                width: 100%;
-                box-sizing: border-box;
-                min-height: 48px;
-                padding: 12px 16px;
-                font-size: 0.95rem;
+            .booking-section {
+                margin-top: 6px;
+                padding-top: 0;
             }
 
-            .booking-section {
-                margin-top: 30px;
-                padding-top: 22px;
+            .booking-heading {
+                margin-bottom: 12px;
             }
 
             .booking-heading h2 {
-                font-size: 1.65rem;
+                font-size: 1.1rem;
             }
 
             .calendar-frame {
@@ -405,7 +327,7 @@
             }
 
             .footer-branding {
-                margin-top: 30px;
+                margin-top: 24px;
                 padding: 8px 16px;
             }
         }
@@ -414,66 +336,27 @@
             html {
                 scroll-behavior: auto;
             }
-
-            .hero-cta {
-                transition: none;
-            }
-        }
-
-        .landing-main .landing-container {
-            display: flex !important;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        .landing-main .hero {
-            display: block !important;
-            width: 100%;
-            text-align: center;
-        }
-
-        .landing-main .booking-section {
-            display: block !important;
-            width: 100%;
-        }
-
-        .landing-main .booking-heading {
-            display: block !important;
-            width: 100%;
-            text-align: center;
-        }
-
-        .landing-main .calendar-frame {
-            display: block !important;
-            width: 100%;
-            clear: both;
         }
     </style>
 </head>
 
 <body>
-
     <main class="landing-main">
         <div class="landing-container">
 
             <section class="hero">
-
                 <p class="offer-label">
                     <span class="offer-dot"></span>
                     Limited-Time Performance-Based Offer
                 </p>
 
                 <h1>
-                    Get More Qualified Private-Pay Families Booking Consultations
-                    <span class="headline-accent">Without Monthly Agency Retainers</span>
+                    Boost Your Homecare Agency Revenue
+                    <span class="headline-accent">Pay on Performance — No Hefty Retainers</span>
                 </h1>
 
                 <p class="hero-description">
-                    We handle your ads, quickly follow up with interested families,
-                    qualify them, and book consultations directly into your calendar
-                    — so you can focus on <strong>growing your home-care business</strong>
-                    and delivering great care.
+                    $500 one-time setup fee + $100 per qualified booked consultation
                 </p>
 
                 <div class="benefits" aria-label="Key features">
@@ -489,43 +372,17 @@
 
                     <div class="benefit">
                         <span class="benefit-icon" aria-hidden="true">✓</span>
-                        <span>Performance-based pricing with no monthly agency retainers</span>
-                    </div>
-
-                    <div class="benefit">
-                        <span class="benefit-icon" aria-hidden="true">✓</span>
                         <span>Flexible ad budgets tailored to your market and growth goals</span>
                     </div>
                 </div>
-
-                <div class="hero-cta-group">
-                    <a class="hero-cta" href="#calendar-section">
-                        Book Your Free Strategy Call
-                        <span class="cta-arrow" aria-hidden="true">→</span>
-                    </a>
-                    <p class="cta-caption">
-                        No obligation. Let's explore the opportunity for your agency.
-                    </p>
-                </div>
-
             </section>
 
             <section class="booking-section" id="calendar-section">
-
                 <div class="booking-heading">
-                    <p class="eyebrow">Your Next Step</p>
-
-                    <h2>Let's Map Out Your Agency's Growth Strategy</h2>
-
-                    <p>
-                        Book a free strategy call to discuss your client acquisition
-                        process, your growth goals, and how this system could work
-                        for your agency.
-                    </p>
+                    <h2>Book a discovery call below to see if you're a fit</h2>
                 </div>
 
                 <div class="calendar-frame">
-
                     <!-- Cal ID inline embed begins -->
                     <div id="my-cal-inline"></div>
 
@@ -583,7 +440,6 @@
                         });
                     </script>
                     <!-- Cal ID inline embed ends -->
-
                 </div>
 
                 <p class="booking-note">
@@ -591,7 +447,6 @@
                     Having trouble booking?
                     <a href="mailto:info@wiobdigital.com">Contact us by email</a>.
                 </p>
-
             </section>
 
             <div class="footer-branding" aria-label="Company credentials">
@@ -616,6 +471,5 @@
             <a href="../terms.html">Terms of Service</a>
         </p>
     </footer>
-
 </body>
 </html>
